@@ -2,13 +2,15 @@
 #	Arguments Makefile
 #
  
+CFILES   = src/arguments.c
+HFILES   = src/arguments.h
 CFLAGS   = -Wall -Wextra
-TESTFILE = test/main.c
-TESTEXE  = test/arguments_test
+TESTFILE = src/test/test.c
+TESTEXE  = src/test/arguments_test
 
-all: src/arguments.c src/arguments.h src/test/main.c
-	gcc $(CFLAGS) src/arguments.c src/test/main.c -o src/test/arguments_test
+all: $(CFILES) $(HFILES) $(TESTFILE)
+	gcc $(CFLAGS) $(CFILES) $(TESTFILE) -o $(TESTEXE)
 
 run: all
-	./src/test/arguments_test
+	./$(TESTEXE)
 
