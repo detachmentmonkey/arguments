@@ -1,14 +1,14 @@
 #
-#	Arguments
+#	Arguments Makefile
 #
  
 CFLAGS   = -Wall -Wextra
 TESTFILE = test/main.c
 TESTEXE  = test/arguments_test
 
-all: arguments.c arguments.h test/main.c
-	gcc $(CFLAGS) arguments.c test/main.c -o test/arguments_test
+all: src/arguments.c src/arguments.h src/test/main.c
+	gcc $(CFLAGS) src/arguments.c src/test/main.c -o src/test/arguments_test
 
 run: all
-	./test/arguments_test
+	./src/test/arguments_test
 

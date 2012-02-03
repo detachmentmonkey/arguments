@@ -1,4 +1,5 @@
 /** @file arguments.c
+ *  Definition of the functions.
  *
  *  Version 1.1 (16/01/11)
  *  Version 1.0 (31/12/11)
