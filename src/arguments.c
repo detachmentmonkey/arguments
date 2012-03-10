@@ -94,7 +94,8 @@ void args_handle (int argc, char* argv[])
 			break;
 
 		default:
-			/* Do nothing */
+			/* Do nothing - i suggest printing the usage and aborting
+			 * execution */
 			break;
 		}
 	}
@@ -102,7 +103,7 @@ void args_handle (int argc, char* argv[])
 	/* Just in case the user specified more arguments (not options)
 	 * than needed, you decide what to do. Here, we just ignore them */
 	while (optind < argc)
-	{ }
+		optind++;
 
 	/* Goodbye, hope you liked it! */
 }
