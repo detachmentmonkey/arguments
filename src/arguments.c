@@ -93,6 +93,11 @@ void args_handle (int argc, char* argv[])
 			 * abort the execution now */
 			break;
 
+		case -1:
+			/* There were no '-' parameters passed
+			 * or all the parameters were processed */
+			break;
+
 		default:
 			/* Do nothing - i suggest printing the usage and aborting
 			 * execution */
